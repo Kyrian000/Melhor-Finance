@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This is the initial file for the dashboard, do not change file name from index.html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Melhor Finance</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="Asset/favicon.png" type="image/x-icon">
+    
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Font Awesome -->
+
+    <!-- Font style cdns -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');    
+    </style>
+    <!-- Font style cdns -->
+
+    <!-- CSS pre-loader -->
+    <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+</head>
+
+<body>
+
+    <!-- start of navbar -->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html" class="nav_logo">
+                <h1>M<span class="span">F</span></h1>
+            </a>
+
+            <ul class="nav-menu">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact/contact.html">Contact Us</a></li>
+                    <li><a href="Login/login.html">Login</a></li>
+                </ul>
+                <button id="open-menu-btn"><i class="fas fa-bars"></i></button>
+                <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></i></button>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+
+
+    <!-- Header starts here -->
+    <header >
+        <div class="container header-container">
+            <div class="header-left">
+                <h2>We help you achieve financial goals</h2>
+                <p>We are committed to providing our customers with exceptional financial service while offering our employees the best training.</p>
+                <a href="Login/login.html" class="btn">Get Started</a>
+            </div>
+            <div class="header-right">
+                <div class="header-right-image">
+                    <img src="Asset/phone.png" alt="">
+                </div>
+            </div>
+        </div>
+   
+    </header>
+    <!-- Header ends here  -->
+
+
+
+
+    <!-- About us starts -->
+
+    <section class="categories">
+        <div class="container categories-container">
+            <div class="categories-left">
+                <h1>About Us</h1>
+                <p>As a financial institution, we are well aware that money management requires a transparent and trusting relationship between a client and a broker in the market. Therefore, we are always ready to provide our partners with any information they may be interested in. </p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+            <div class="categories-right"> 
+                <article class="category" >
+                    <span class="category-icon"><i class="fas fa-headset"></i></i></span>
+                    <h5>24/7 Support</h5>
+                    <p>Our Concierge is top-notch, offering constant support to customers</p>
+                </article>
+                
+                <article class="category" >
+                    <span class="category-icon"><i class="fas fa-balance-scale"></i></i></span>
+                    <h5>Diversified Investments</h5>
+                    <p>We offer a large platter of alternatives for investments options with great returns!</p>
+                </article>
+                
+                <article class="category" >
+                    <span class="category-icon"><i class="fas fa-lock"></i></span>
+                    <h5>Top-Notch Security</h5>
+                    <p>We use industry-standard encryption technology to protect user data.</p>
+                </article>
+
+</section>
+
+
+<!-- Investment starts -->
+
+<section class="courses">
+    <h2>Investment plans</h2>
+    <div class="container courses-container">
+        <article class="course">
+            <div class="course-info">
+                <p> MelhorTrust Funds</p>
+                <h4>$100 / 12% After 3 days</h4>
+                <p> Minimum: $100</p>
+                <p> Maximum: $2,999</p>
+                <p> Duration: 3 days</p>
+                <p>Quality investment Experience</p>
+                <p> 24/7 phone and email support</p>
+                <p>Instant Withdrawal</p>
+                <a href="#" class="btn btn-primary">Discover More</a>
+            </div>
+        </article>
+
+        <article class="course">
+            <div class="course-info">
+                <p> Tax Free Savings Account</p>
+                <h4>$3,000 / 16% After 5 days</h4>
+                <p> Minimum: $3,000</p>
+                <p> Maximum: $9,999</p>
+                <p> Duration: 5 days</p>
+                <p>Quality investment Experience</p>
+                <p> 24/7 phone and email support</p>
+                <p>Instant Withdrawal</p>
+                <a href="#" class="btn btn-primary">Discover More</a>
+            </div>
+        </article>
+
+        <article class="course">
+            <div class="course-info">
+                <p> Offshore Account</p>
+                <h4>$10,000 / 20% After 7 days</h4>
+                <p> Minimum: $10,000</p>
+                <p> Maximum: $49,999</p>
+                <p> Duration: 7 days</p>
+                <p>Quality investment Experience</p>
+                <p> 24/7 phone and email support</p>
+                <p>Instant Withdrawal</p>
+                <a href="#" class="btn btn-primary">Discover More</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- Investment ends -->
+
+
+    <!-- About us ends here -->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</body>
+</html>
