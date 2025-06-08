@@ -25,3 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+// testimonial slider
+var swiper = new Swiper(".testimonial-slider", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    // centeredSlides: true,
+    grabCursor:true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints:{
+        640:{
+            slidesPerView:1,
+        },
+        768:{
+            slidesPerView:2,
+        },
+        991:{
+            slidesPerView:3,
+        },
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    
+  });

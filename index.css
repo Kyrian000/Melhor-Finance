@@ -548,6 +548,55 @@ header{
 
 
 
+
+/* Testimonials start here */
+
+.testimonial-container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+    h2{
+        color: var(--color-black);
+    }
+    .testimonial{
+        padding-top: 2rem;
+        .avatar{
+            width: 7rem;
+            height: 6rem;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            border: 0 solid var(--color-bg1);
+            align-content: center;
+        }
+        .testimonial-info{
+            text-align: center;
+            color: var(--color-black);
+        }
+        .testimonial-body{
+            background: var(--color-white);
+            padding: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            &::before{
+                content: "";
+                display: block;
+                background: linear-gradient(135deg, transparent, var(--color-white), var(--color-white));
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                left: 48%; top: -1.5rem;
+                transform: rotate(45deg);
+            }
+            p{
+                color: var(--color-black);
+            }
+        }
+    }
+
+}
+
+/* Testimonials ends here */
+
 /* tablet media queries */
 @media screen and (max-width: 1024px){
     .container{
