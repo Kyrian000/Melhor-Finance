@@ -28,6 +28,11 @@
     <div class="loader-wrapper">
         <span class="loader"></span>
     </div>
+
+    <!--Swiper CSS  -->
+    <!-- Add this in the <head> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -158,12 +163,53 @@
 <!-- Investment ends -->
 
 
-    <!-- About us ends here -->
-    <script src="index.js"></script>
+
+<!-- pcb logo section starts  -->
+
+<!-- <section class="logo-container">
+    <div class="swiper logo-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/btc.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/doge.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/ark.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/jpy.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/sol.svg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section> -->
+
+<!-- pcb logo section ends  -->
+
+
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+    
+  
+  <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(window).on("load",function(){
             $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper(".logo-slider", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 2,
+            loop: true,
+            grabCursor: true,
+            pagination: {
+                el: false,
+                clickable: false,
+            },
         });
     </script>
 </body>

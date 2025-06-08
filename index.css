@@ -111,6 +111,28 @@ img{
     color: var(--color-white);
 }
 
+
+/* Swiper slide */
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 10rem;
+      height: 4rem;
+      object-fit: cover;
+    }
+
 /* CSS loader */
 .loader-wrapper{
     width: 100%;
@@ -508,6 +530,23 @@ header{
 /* Investment ends here */
 
 
+/* logo section starts now */
+
+.logo-container{
+    padding-top: 3rem;
+    text-align: center;
+
+    img{
+        padding-bottom: 3rem;
+        height: 10rem;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+/* logo section ends now */
+
+
 
 /* tablet media queries */
 @media screen and (max-width: 1024px){
@@ -750,5 +789,12 @@ header{
         }
     }
 
+    /* popular courses  */
+    .courses{
+        .courses-container{
+            grid-template-columns: 1fr;
+            
+        }
+    }
 }
 
