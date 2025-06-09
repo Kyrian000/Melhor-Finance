@@ -381,6 +381,7 @@ header{
 
 
 
+/*  About section starts here */
 .categories{
     background: var(--color-primary);
     height: 30rem;
@@ -478,7 +479,10 @@ header{
     }
 }
 
-/* Services ends */
+/*  About section ends here */
+
+
+
 
 
 /* Investment starts here */
@@ -555,6 +559,7 @@ header{
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
+
     h2{
         color: var(--color-black);
     }
@@ -596,6 +601,214 @@ header{
 }
 
 /* Testimonials ends here */
+
+
+
+/* contact section starts here */
+.contact{
+    background-color: var(--color-white);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.404);
+    height: 52rem;
+    .contact-container{
+        background: var(--color-bg1);
+        padding: 4rem;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 4rem;    
+        height: 30rem;
+        margin: 7rem auto;
+        border-radius: 1rem;
+        .contact-aside{
+            background: var(--color-bg2);
+            border-radius: 1rem;
+            padding: 3rem;
+            position: relative;
+            bottom: 8rem;
+            .aside-image{
+                width: 12rem;
+                margin-bottom: 2rem;
+            }
+            h2{
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 0.9rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .contact-details{
+            li{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+        }
+        .contact-socials{
+            display: flex;
+            gap: 0.9rem;
+            margin-top: 3rem;
+            a{                
+                padding: 0.5rem 0.7rem;
+                border-radius: 1.7rem;
+                background: var(--color-bg1);
+                &:hover{
+                    background: transparent;
+                }
+            }
+        }
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-right: 4rem;
+            .form-name{
+                display: flex;
+                gap: 1.2rem;
+            }
+            input[type="text"]{
+                width: 50%;
+            }
+            input, textarea{
+                width: 100%;
+                padding: 1rem;
+                background: var(--color-white);
+                color: var(--color-black);
+            }
+            .btn{
+                width: max-content;
+                cursor: pointer;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+/* contact section starts here */
+
+
+
+/* facilties section starts */
+.facilities-container{
+    overflow: hidden;
+    background-image: url('Asset/shape/service-shape.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    .facilities{
+        .facility{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        /* overflow: hidden; */
+        
+        .right{
+            img{
+                height: 30rem;
+                width: 30rem;
+                border-radius: 3rem 0 3rem 3rem;
+            }
+        }
+        .left{
+            margin-top: 1rem;
+            
+            h4{
+                color: var(--color-danger);
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            p{
+                line-height: 2;
+                color: black;
+            }
+        }
+    }
+
+
+    }
+}
+/* facilities ends starts */
+
+
+/* Footer starts here */
+
+.footer{
+    background: var(--color-bg1);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+    
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5rem;
+        
+        .footer-1{
+            .footer-logo{
+                h4{
+                    span{
+                        color: var(--color-black);
+                    }
+                }
+            }
+            p{
+                font-size: 0.9rem;
+                font-weight: 200;
+                margin: 0 0 2rem;
+            }
+        }
+        .footer-socials{
+            display: flex;
+            gap: 1rem;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            
+            li{
+                a{
+                    border-radius: 2rem;
+                    padding: 0.5rem 0.7rem;
+
+                    &:hover{
+                    color: var(--color-black);
+                    background: var(--color-white);
+                }
+            }
+        }
+        }
+        
+    }
+    .footer-copyright{
+        text-align: center;
+        margin-top: 4rem;
+        padding: 1.2rem 0;
+        border-top: 1px solid var(--color-bg2);
+    }
+}
+.footer-container > div h4{
+    margin-bottom: 1.2rem;
+
+}
+
+.footer ul li {
+    margin-bottom: 0.7rem;
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.footer-container h4{
+    background: var(--color-bg2);
+    padding: 1rem 1rem;
+    border-radius: 0.7rem;
+    box-shadow:  0 0 3rem rgba(0, 0, 0, 0.507) ;
+    &:hover{
+        background: var(--color-bg);
+        color: var(--color-white);
+        transform: translateY(-1rem);
+    }
+}
+
+/* Footer ends here  */
 
 /* tablet media queries */
 @media screen and (max-width: 1024px){
@@ -754,7 +967,7 @@ header{
     }
 
 
-    /* Investment plans */
+/* investment options starts here */
     .courses{
         margin-top: 0;
         .courses-container{
@@ -766,6 +979,57 @@ header{
             }
         }
     }
+
+/* contacts sections */
+    .contact{
+        padding-bottom: 0;
+        .contact-container{
+            gap: 1.5rem;
+            margin-top: 3rem;
+            height: auto;
+            padding: 1.5rem;
+            .contact-aside{
+                width: auto;
+                padding: 1.5rem;
+                bottom: 0;
+                .aside-image{
+                    width: 100%;
+                }
+            }
+            .contact-form{
+                align-self: center;
+                margin-right: 1.5rem;
+            }
+        }
+
+    }
+/* facilities section starts */
+
+    .facilities-container{
+        .facilities{
+            .facility{
+                .left{
+                    margin-top: 2rem;
+                    h4{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        line-height: 1.3;
+                    }
+                }
+            }
+        }
+    }
+
+/* facilities section ends */
+
+    /* footer starts here*/
+    .footer{
+        .footer-container{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    /* footer ends here*/
 
 }
 
@@ -787,6 +1051,7 @@ header{
     .container{
         width: var(--container-width-sm);
     }
+    
     /* navbar  */
     .nav-menu{
         right: 3%;
@@ -843,6 +1108,62 @@ header{
         .courses-container{
             grid-template-columns: 1fr;
             
+        }
+    }
+
+/* contact section */
+    .contact{
+        height: auto;
+        .contact-container{
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: -2rem;
+            padding: 0;
+            .contact-aside{
+
+                .aside-image{
+                    
+                    width: 12rem;
+                }
+            }
+            .contact-form{
+                margin: 0 1.5rem 3rem;
+                .form-name{
+                    flex-direction: column;
+                    input[type="text"]{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+/* facilities starts */
+    .facilities-container{
+        .facilities{
+            .facility{
+            grid-template-columns: 1fr;
+            }
+        }
+    }
+
+/* facilities ends */
+
+
+
+/* footer  */
+    .footer{
+        margin-top: -7.2rem;
+        .footer-container{
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+            .footer-socials{
+                justify-content: center;
+            }
         }
     }
 }

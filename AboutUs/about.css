@@ -214,7 +214,7 @@
             }
         }
         .about-achievements-right{
-            h1, p{color: var(--color-black);}
+            h1, p{color: var(--color-white);}
             .achievements-cards{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
