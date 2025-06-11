@@ -151,7 +151,7 @@ img{
         border-radius: 50%;
         width: 12rem;
         height: 12rem;
-        color: #fff;
+        color: var(--color-white);
       }
         .loader:before,
         .loader:after {
@@ -217,6 +217,134 @@ img{
           box-shadow: .2em -.2em 0 0 currentcolor;
         }
       }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(203, 201, 211, 0.753);
+}
+#kast{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 4.0s;
+}
+
+#kast path:nth-child(9){
+    stroke-dasharray: 256px;
+    stroke-dashoffset: 256px;
+    animation: line-anim 2s ease forwards ;
+}
+
+#kast path:nth-child(8){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+
+#kast path:nth-child(7){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#kast path:nth-child(6){
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#kast path:nth-child(5){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#kast path:nth-child(4){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+#kast path:nth-child(3){
+    stroke-dasharray: 450px;
+    stroke-dashoffset: 450px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+#kast path:nth-child(2){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+#kast path:nth-child(1){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 2.4s;
+}
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: rgb(3, 3, 3);
+    }
+}
+.get-started{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+        
+    
+    .start{
+        letter-spacing: 10px;
+        font-family: monospace;
+        font-size: 1.5em;
+        text-decoration: none;
+        border: 1px solid rgba(0, 0, 0, 0.589);
+        background: rgba(245, 4, 4, 0.699);
+        border-radius: 2rem;
+        color: white;
+        padding: 1rem 2rem;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: 
+            cursor .4s step-end infinite alternate, typer 5s ease;
+        } 
+        &:hover{
+            background: rgba(245, 4, 4, 0);
+            border-radius: 2rem;
+        }
+}
+
+
+
+@media screen and (max-width: 604px){
+    #kast{
+        width: 19rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 320px){
+    #kast{
+        width: 17rem;
+    }
+}
    
 
 
@@ -225,11 +353,13 @@ img{
     from {
         opacity: 0;
         /* scale: 0.5; */
+        visibility: hidden;
         transform: translateY(15rem); /* Starts 20px above */
     }
     to {
         opacity: 1;
         /* scale: 1; */
+        visibility: visible;
         transform: translateY(0);
     }
 }
@@ -237,11 +367,13 @@ img{
     from {
         opacity: 0;
         scale: 0.5;
+        visibility: hidden;
         transform: translateX(15rem); /* Starts 20px above */
     }
     to {
         opacity: 1;
         scale: 1;
+        visibility: visible;
         transform: translateY(0);
     }
 }
@@ -249,23 +381,42 @@ img{
     from {
         opacity: 0;
         scale: 0.5;
+        visibility: hidden;
         transform: translateX(-15rem); /* Starts 20px above */
     }
     to {
         opacity: 1;
         scale: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+@keyframes appear3 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15rem); 
+    }
+    1%{
+        visibility: visible;          
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
         transform: translateY(0);
     }
 }
 @keyframes appear4{
     from {
         opacity: 0;
-        
+        visibility: hidden;
         transform: translateX(-15rem); 
     }
 
     to {
         opacity: 1;    
+        visibility: visible;
         transform: translateX(0rem);
     }
 }
@@ -359,6 +510,8 @@ header{
         gap: 2rem;
         height: 100%;
         .header-right{
+            visibility: hidden;
+            animation: appear1 .8s linear 4.5s forwards;
             img{
                 background-image: url('Asset/Features/icon-bg-shape1.png');
                 background-repeat: no-repeat;
@@ -369,6 +522,8 @@ header{
         .header-left{
             margin: 1rem 0 2.4rem;
             color: var(--color-primary);
+            visibility: hidden;
+            animation: appear4 .8s linear 4.5s forwards;
             p{
                 margin: 1rem 0 2rem;
                 color: var(--color-black);
@@ -708,6 +863,10 @@ header{
                 width: 30rem;
                 border-radius: 3rem 0 3rem 3rem;
             }
+            video{
+                height: 30rem;
+                width: 30rem;
+            }
         }
         .left{
             margin-top: 1rem;
@@ -1003,6 +1162,7 @@ header{
         }
 
     }
+
 /* facilities section starts */
 
     .facilities-container{
@@ -1062,18 +1222,12 @@ header{
         height: 95vh;
         .header-container{
             .header-right{
-                animation: appear .7s linear;
+                visibility: hidden;
+                animation: appear3 .8s linear 4.5s forwards;
             }
             .header-left{
-                h2{
-                    animation: appear2 .4s linear;
-                }
-                p{
-                    animation: appear1 .4s linear;
-                }
-                a{
-                    animation: appear .6s linear;
-                }
+                visibility: hidden;
+                animation: appear3 .8s linear 4.5s forwards;
 
             }
             margin-top: 1.5rem;
@@ -1143,9 +1297,28 @@ header{
 
 /* facilities starts */
     .facilities-container{
+        background-color: var(--color-white);
         .facilities{
             .facility{
             grid-template-columns: 1fr;
+            .right{
+                img{
+                    height: 20rem;
+                    width: max-content;
+                    border-radius: 3rem 0 3rem 3rem;
+                    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.404);
+                }
+                .estate{
+                    height: 20rem;
+                    width: 20rem;
+                }
+                }
+            }
+            .left{
+                gap: 2rem;
+                p{
+                    font-size: 1rem;
+                }
             }
         }
     }
