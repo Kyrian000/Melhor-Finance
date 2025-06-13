@@ -300,35 +300,6 @@ body{
         fill: rgb(3, 3, 3);
     }
 }
-.get-started{
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-        
-    
-    .start{
-        letter-spacing: 10px;
-        font-family: monospace;
-        font-size: 1.5em;
-        text-decoration: none;
-        border: 1px solid rgba(0, 0, 0, 0.589);
-        background: rgba(245, 4, 4, 0.699);
-        border-radius: 2rem;
-        color: white;
-        padding: 1rem 2rem;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: 
-            cursor .4s step-end infinite alternate, typer 5s ease;
-        } 
-        &:hover{
-            background: rgba(245, 4, 4, 0);
-            border-radius: 2rem;
-        }
-}
 
 
 
@@ -354,7 +325,7 @@ body{
         opacity: 0;
         /* scale: 0.5; */
         visibility: hidden;
-        transform: translateY(15rem); /* Starts 20px above */
+        transform: translateY(5rem); /* Starts 20px above */
     }
     to {
         opacity: 1;
@@ -368,7 +339,7 @@ body{
         opacity: 0;
         scale: 0.5;
         visibility: hidden;
-        transform: translateX(15rem); /* Starts 20px above */
+        transform: translateX(5rem); /* Starts 20px above */
     }
     to {
         opacity: 1;
@@ -382,7 +353,7 @@ body{
         opacity: 0;
         scale: 0.5;
         visibility: hidden;
-        transform: translateX(-15rem); /* Starts 20px above */
+        transform: translateX(-5rem); /* Starts 20px above */
     }
     to {
         opacity: 1;
@@ -395,7 +366,7 @@ body{
     0% {
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-15rem); 
+        transform: translateY(-5rem); 
     }
     1%{
         visibility: visible;          
@@ -411,7 +382,7 @@ body{
     from {
         opacity: 0;
         visibility: hidden;
-        transform: translateX(-15rem); 
+        transform: translateX(-5rem); 
     }
 
     to {
@@ -511,7 +482,7 @@ header{
         height: 100%;
         .header-right{
             visibility: hidden;
-            animation: appear1 .8s linear 4.5s forwards;
+            animation: appear1 1s linear 4.5s forwards;
             img{
                 background-image: url('Asset/Features/icon-bg-shape1.png');
                 background-repeat: no-repeat;
@@ -523,7 +494,7 @@ header{
             margin: 1rem 0 2.4rem;
             color: var(--color-primary);
             visibility: hidden;
-            animation: appear4 .8s linear 4.5s forwards;
+            animation: appear4 1s linear 4.5s forwards;
             p{
                 margin: 1rem 0 2rem;
                 color: var(--color-black);
@@ -1227,7 +1198,7 @@ header{
             }
             .header-left{
                 visibility: hidden;
-                animation: appear3 .8s linear 4.5s forwards;
+                animation: appear3 1.3s linear 4.5s forwards;
 
             }
             margin-top: 1.5rem;

@@ -74,7 +74,9 @@
             border: 1px solid transparent;
             position: relative;
             overflow: hidden;
-            animation: appear .5s linear;
+            visibility: hidden;
+            animation: appear3 .5s linear 3.5s forwards;
+
 
             &:hover{
                 background: transparent;
@@ -84,15 +86,18 @@
                     right: 0;
                 }
             }
-            &:nth-child(2){
+            /* &:nth-child(2){
+                visibility: hidden;
                 animation: appear .7s linear;
             }
             &:nth-child(3){
+                visibility: hidden;
                 animation: appear .9s linear;
             }
             &:nth-child(4){
+                visibility: hidden;
                 animation: appear 1.1s linear;
-            }
+            } */
             
             
             
