@@ -861,7 +861,7 @@ header{
 }
 /* facilities ends starts */
 
-header{
+#header{
     position: relative;
     top: 5rem;
     overflow: hidden;
