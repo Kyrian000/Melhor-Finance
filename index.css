@@ -821,6 +821,12 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    h2{
+        line-height: 1;
+        margin-bottom: 3rem;
+        color: var(--color-black);
+        justify-self: center;
+    }
     .facilities{
         .facility{
         display: grid;
@@ -832,11 +838,7 @@ header{
             img{
                 height: 30rem;
                 width: 30rem;
-                border-radius: 3rem 0 3rem 3rem;
-            }
-            video{
-                height: 30rem;
-                width: 30rem;
+                border-radius: 3rem 3rem 0 3rem ;
             }
         }
         .left{
@@ -859,6 +861,120 @@ header{
 }
 /* facilities ends starts */
 
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 90vh;
+    margin-bottom: 5rem;
+    background-color: var(--color-bg1);
+                    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.404);
+
+    .vacation-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+        height: 100%;
+        .vacation-right{
+            visibility: hidden;
+            animation: appear1 1s linear 4.5s forwards;
+            .vacation-right-image{
+                background-image: url('Asset/Features/icon-bg-shape1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                    .swiper {
+                        width: 240px;
+                        height: 320px;
+                        }
+
+                        .swiper-slide {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 18px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: inherit;
+                        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.404);
+
+                        }
+
+                        .swiper-slide:nth-child(1n) {
+                        background-image: url('Asset/Countries/Amsterdam.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+
+                        }
+
+                        .swiper-slide:nth-child(2n) {
+                        background-image: url('Asset/Countries/Barcelona.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                            
+                    }
+
+                        .swiper-slide:nth-child(3n) {
+                        background-image: url('Asset/Countries/Italy.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        color: var(--color-warning);
+                        }
+
+                        .swiper-slide:nth-child(4n) {
+                        background-image: url('Asset/Countries/Japan.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        
+                        }
+
+                        .swiper-slide:nth-child(5n) {
+                        background-image: url('Asset/Countries/Maldives.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        
+                        }
+
+                        .swiper-slide:nth-child(6n) {
+                        background-image: url('Asset/Countries/Paris.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        
+                        color: var(--color-black);
+                        }
+
+                        .swiper-slide:nth-child(7n) {
+                        background-image: url('Asset/Countries/UAE.jpeg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        color: var(--color-black);
+                        }
+
+            }
+        }
+        .vacation-left{
+            margin: 1rem 0 2.4rem;
+            color: var(--color-primary);
+            visibility: hidden;
+            animation: appear4 1s linear 4.5s forwards;
+            h2{
+                color: var(--color-danger);
+            }
+            p{
+                margin: 1rem 0 2rem;
+                color: var(--color-white);
+                }
+        }
+    }
+}
 
 /* Footer starts here */
 
@@ -1154,6 +1270,20 @@ header{
 
 /* facilities section ends */
 
+
+
+/* Vacation section starts */
+    header{
+        height: 52vh;
+        margin-bottom: 4rem;
+        .vacation-container{
+            gap: 5rem;
+            padding-bottom: 3rem;
+        }
+    }
+/* Vacation section ends */
+
+
     /* footer starts here*/
     .footer{
         .footer-container{
@@ -1296,7 +1426,26 @@ header{
 
 /* facilities ends */
 
-
+/* vacation starts here  */
+    header{
+        height: 95vh;
+        .vacation-container{
+            .vacation-right{
+                margin-bottom: 8rem;
+                visibility: hidden;
+                animation: appear3 .8s linear 4.5s forwards;
+            }
+            .vacation-left{
+                visibility: hidden;
+                animation: appear3 1.3s linear 4.5s forwards;
+            }
+            margin-top: 1.5rem;
+            grid-template-columns: 1fr;
+            text-align: center;
+            /* margin-top: 0; */
+            gap: 0;
+        }
+    }
 
 /* footer  */
     .footer{
