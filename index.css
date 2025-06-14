@@ -1273,7 +1273,7 @@ header{
 
 
 /* Vacation section starts */
-    header{
+    #header{
         height: 52vh;
         margin-bottom: 4rem;
         .vacation-container{
@@ -1427,7 +1427,7 @@ header{
 /* facilities ends */
 
 /* vacation starts here  */
-    header{
+    #header{
         height: 95vh;
         .vacation-container{
             .vacation-right{
