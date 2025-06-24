@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This is the initial file for the dashboard, do not change file name from index.html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Melhor Finance</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="Asset/favicon.png" type="image/x-icon">
+    
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Font Awesome -->
+
+    <!-- Font style cdns -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');    
+    </style>
+    <!-- Font style cdns -->
+
+    <!-- CSS pre-loader -->
+    <div class="loader-wrapper">
+        <!-- Option 1 -->
+        <span class="loader"></span>
+
+        <!-- Option 2 -->
+       
+        <svg 
+                id="kast"
+                width="458" 
+                height="128" 
+                viewBox="0 0 458 128" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M399.15 41.52H430.19C434.841 41.52 439.043 42.5013 442.798 44.464C446.595 46.384 449.603 49.2 451.822 52.912C454.041 56.624 455.15 61.1253 455.15 66.416C455.15 71.664 454.147 75.9947 452.142 79.408C450.137 82.8213 447.726 85.3813 444.91 87.088C442.094 88.7947 439.47 89.7547 437.038 89.968L457.838 126H442.67L423.47 90.992H412.59V126H399.15V41.52ZM412.59 81.264H425.39C429.913 81.264 433.71 80.1333 436.782 77.872C439.854 75.6107 441.39 71.92 441.39 66.8C441.39 61.6373 439.875 57.968 436.846 55.792C433.817 53.616 430.041 52.528 425.518 52.528H412.59V81.264Z" stroke="white" stroke-width="2"/>
+                    <path d="M316.268 83.696C316.268 89.4987 317.484 94.768 319.916 99.504C322.348 104.197 325.697 107.931 329.964 110.704C334.231 113.435 339.137 114.8 344.684 114.8C350.316 114.8 355.244 113.435 359.468 110.704C363.735 107.931 367.063 104.197 369.452 99.504C371.884 94.768 373.1 89.4987 373.1 83.696C373.1 77.8933 371.884 72.6453 369.452 67.952C367.063 63.2587 363.735 59.5467 359.468 56.816C355.244 54.0853 350.316 52.72 344.684 52.72C339.137 52.72 334.231 54.0853 329.964 56.816C325.697 59.5467 322.348 63.2587 319.916 67.952C317.484 72.6453 316.268 77.8933 316.268 83.696ZM302.252 83.696C302.252 77.552 303.319 71.8347 305.452 66.544C307.628 61.2107 310.615 56.56 314.412 52.592C318.252 48.624 322.753 45.5307 327.916 43.312C333.079 41.0933 338.668 39.984 344.684 39.984C350.785 39.984 356.396 41.0933 361.516 43.312C366.679 45.5307 371.18 48.624 375.02 52.592C378.86 56.56 381.825 61.2107 383.916 66.544C386.007 71.8347 387.052 77.552 387.052 83.696C387.052 89.8827 386.007 95.6427 383.916 100.976C381.868 106.267 378.945 110.917 375.148 114.928C371.351 118.896 366.871 121.989 361.708 124.208C356.545 126.427 350.871 127.536 344.684 127.536C338.455 127.536 332.737 126.427 327.532 124.208C322.369 121.989 317.889 118.896 314.092 114.928C310.337 110.917 307.415 106.267 305.324 100.976C303.276 95.6427 302.252 89.8827 302.252 83.696Z" stroke="white" stroke-width="2"/>
+                    <path d="M276.335 89.648H239.279V126H225.903V41.52H239.279V77.68H276.335V41.52H289.647V126H276.335V89.648Z" stroke="white" stroke-width="2"/>
+                    <path d="M166.031 41.52H179.535V113.968H211.983V126H166.031V41.52Z" stroke="white" stroke-width="2"/>
+                    <path d="M98.278 41.52H149.478V53.552H111.654V77.808H148.838V89.52H111.654V113.968H149.478V126H98.278V41.52Z" stroke="white" stroke-width="2"/>
+                    <path d="M81 0V126H67.5427V40.1864L68.1835 24.0545L65.6203 42.1909L47.1005 117.982H33.8354L15.3797 42.1909L12.8165 24.0545L13.4573 40.1864V126H0V0H18.3916L39.5388 94.3091L40.5 101.85L41.3972 94.3091L62.6725 0H81Z" stroke="white" stroke-width="2"/>
+        </svg>
+
+    </div>
+
+    <!--Swiper CSS  -->
+    <!-- Add this in the <head> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <!-- start of navbar -->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html" class="nav_logo">
+                <h1>M<span class="span">F</span></h1>
+            </a>
+
+            <ul class="nav-menu">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact/contact.html">Contact Us</a></li>
+                    <li><a href="signup.html">Login/Register</a></li>
+                </ul>
+                <button id="open-menu-btn"><i class="fas fa-bars"></i></button>
+                <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></i></button>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+
+
+    <!-- Header starts here -->
+    <header>
+        <div class="container header-container">
+            <div class="header-left">
+                <h2>We help you achieve financial goals</h2>
+                <p>We are committed to providing our customers with exceptional financial service while offering our employees the best training.</p>
+                <a href="login.html" class="btn">Get Started</a>
+            </div>
+            <div class="header-right">
+                <div class="header-right-image">
+                    <img src="Asset/phone.png" alt="">
+                </div>
+            </div>
+        </div>
+   
+    </header>
+    <!-- Header ends here  -->
+
+
+
+
+    <!-- About us starts -->
+
+    <section class="categories">
+        <div class="container categories-container">
+            <div class="categories-left">
+                <h1>About Us</h1>
+                <p>As a financial institution, we are well aware that money management requires a transparent and trusting relationship between a client and a broker in the market. Therefore, we are always ready to provide our partners with any information they may be interested in. </p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+            <div class="categories-right"> 
+                <article class="category" >
+                    <span class="category-icon"><i class="fas fa-headset"></i></i></span>
+                    <h5>24/7 Support</h5>
+                    <p>Our Concierge is top-notch, offering constant support to customers</p>
+                </article>
+                
+                <article class="category" >
+                    <span class="category-icon"><i class="fas fa-balance-scale"></i></i></span>
+                    <h5>Diversified Investments</h5>
+                    <p>We offer a large platter of alternatives for investments options with great returns!</p>
+                </article>
+                
+                <article class="category" >
+                    <span class="category-icon"><i class="fas fa-lock"></i></span>
+                    <h5>Top-Notch Security</h5>
+                    <p>We use industry-standard encryption technology to protect user data.</p>
+                </article>
+
+</section>
+
+
+<!-- /* Investment options section starts */ -->
+
+
+<section class="courses">
+    <h2>Investment plans</h2>
+    <div class="container courses-container">
+        <article class="course">
+            <div class="course-info">
+                <p> MelhorTrust Funds</p>
+                <h4>$100 / 12% After 3 days</h4>
+                <p> Minimum: $100</p>
+                <p> Maximum: $2,999</p>
+                <p> Duration: 3 days</p>
+                <p>Quality investment Experience</p>
+                <p> 24/7 phone and email support</p>
+                <p>Instant Withdrawal</p>
+                <a href="#" class="btn btn-primary">Discover More</a>
+            </div>
+        </article>
+
+        <article class="course">
+            <div class="course-info">
+                <p> Tax Free Savings Account</p>
+                <h4>$3,000 / 16% After 5 days</h4>
+                <p> Minimum: $3,000</p>
+                <p> Maximum: $9,999</p>
+                <p> Duration: 5 days</p>
+                <p>Quality investment Experience</p>
+                <p> 24/7 phone and email support</p>
+                <p>Instant Withdrawal</p>
+                <a href="#" class="btn btn-primary">Discover More</a>
+            </div>
+        </article>
+
+        <article class="course">
+            <div class="course-info">
+                <p> Offshore Account</p>
+                <h4>$10,000 / 20% After 7 days</h4>
+                <p> Minimum: $10,000</p>
+                <p> Maximum: $49,999</p>
+                <p> Duration: 7 days</p>
+                <p>Quality investment Experience</p>
+                <p> 24/7 phone and email support</p>
+                <p>Instant Withdrawal</p>
+                <a href="#" class="btn btn-primary">Discover More</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- /* Investment options section starts */ -->
+
+
+
+<!-- facilities starts here -->
+
+<section class="container facilities-container facilities-slider">
+    <h2>Diversified Investment Options</h2>
+    <div class="swiper-wrapper facilities">
+        <article class="swiper-slide facility">
+            <div class="right">
+                <img src="Asset/Bitcoin.gif" alt="KikitheMan">
+            </div>
+            <div class="left">
+                <h4>Cryptocurrency</h4>
+                <p>Melhor Finance now offers all traders the opportunity to trade a wide range of the top ranked digital coins 24/7*. Today cryptocurrencies have become known to most people as a conventional and popular investment option. The main purpose of this new technology is to allow people to buy, trade, and invest without the need for banks or any other financial institution. Cryptocurrencies are highly volatile and can be profitable to any trader’s portfolio.</p>
+            </div>
+            
+        </article>
+
+        <article class="swiper-slide facility">
+            <div class="right">
+                <img src="Asset/forex.gif" alt="KikitheMan">
+            </div>
+            <div class="left">
+                <h4>Forex</h4>
+                <p>Forex is a portmanteau of foreign currency and exchange. Foreign exchange is the process of changing one currency into another currency for a variety of reasons, usually for commerce, trading, or tourism. According to a recent triennial report from the Bank for International Settlements (a global bank for national central banks), the average was more than $5.1 trillion in daily forex trading volume.</p>
+            </div>
+            
+        </article>
+
+        <article class="swiper-slide facility">
+            <div class="right">
+                <img src="Asset/gold.gif" alt="KikitheMan">
+            </div>
+            <div class="left">
+                <h4>Gold</h4>
+                <p>Commonly seen as a great store of wealth, this precious metal is also known as a reliable safe-haven asset. With a rich history amongst almost all global cultures, gold remains a highly popular investment. Although it has multiple uses, its primary function is typically to hedge against inflation in an often volatile futures market, as well as to diversify existing Precious Metals Investment Retirement Accounts.</p>
+            </div>
+        </article>
+
+        <article class="swiper-slide facility">
+            <div class="right">
+                <img class="estate" src="Asset/Selling Real Estate GIF by Anchor Point.gif" alt="">
+            </div>
+            <div class="left">
+                <h4>Real estate</h4>
+                <p>Real estate investment involves the purchase, ownership, management, rental and/or sale of real estate for profit. Improvement of realty property as part of a real estate investment strategy is generally considered to be a sub-specialty of real estate investing called real estate development. Real estate is an asset form with limited liquidity relative to other investments (such as stocks or bonds that openly trade on financial markets). </p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- facilities ends here -->
+
+
+    <!-- Vacation starts here -->
+    <header id="header" >
+        <div class="container vacation-container">
+            <div class="vacation-left">
+                <h2>Win a company-paid Vacation!</h2>
+                <p>Stand a chance to win a company-paid vacation to any of these lovely spots. Soak in the scenery and bask in an all-expense paid trip.</p>
+                <a href="login.html" class="btn">Learn more</a>
+            </div>
+            <div class="vacation-right">
+                <div class="vacation-right-image">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Amsterdam</div>
+                            <div class="swiper-slide">Barcelona</div>
+                            <div class="swiper-slide">Italy</div>
+                            <div class="swiper-slide">Japan</div>
+                            <div class="swiper-slide">Maldives</div>
+                            <div class="swiper-slide">Paris</div>
+                            <div class="swiper-slide">UAE</div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+   
+    </header>
+    <!-- Vacation ends here  -->
+
+<!-- Testimonials starts here -->
+
+    <section class="container testimonial-container testimonial-slider">
+        <h2>What our clients say</h2>        
+        <div class="swiper-wrapper">
+            <article class="swiper-slide testimonial">
+                <div class="avatar">
+                    <img src="Asset/shape/powerful-tools-shape2.png" alt="KikitheMan">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Jane</h5>
+                    <small>US</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sequi ab repellendus dolorum vero corrupti!</p>
+                </div>
+            </article>
+
+            <article class="swiper-slide testimonial">
+                <div class="avatar">
+                    <img src="Asset/shape/powerful-tools-shape2.png" alt="KikitheMan">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Nick Royer</h5>
+                    <small>UK</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sequi ab repellendus dolorum vero corrupti!</p>
+                </div>
+            </article>
+
+            <article class="swiper-slide testimonial">
+                <div class="avatar">
+                    <img src="Asset/shape/powerful-tools-shape2.png" alt="KikitheMan">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Jane Cooper</h5>
+                    <small>Canada</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sequi ab repellendus dolorum vero corrupti!</p>
+                </div>
+            </article>
+
+            <article class="swiper-slide testimonial">
+                <div class="avatar">
+                    <img src="Asset/shape/powerful-tools-shape2.png" alt="KikitheMan">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Smith Jenifar</h5>
+                    <small>Finland</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sequi ab repellendus dolorum vero corrupti!</p>
+                </div>
+            </article>
+
+            <article class="swiper-slide testimonial">
+                <div class="avatar">
+                    <img src="Asset/shape/powerful-tools-shape2.png" alt="KikitheMan">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Ichigo Kurosagi</h5>
+                    <small>Japan</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sequi ab repellendus dolorum vero corrupti!</p>
+                </div>
+            </article>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </section>
+
+<!-- Testimonials ends here -->
+
+<!-- pcb logo section starts  -->
+
+<!-- <section class="logo-container">
+    <div class="swiper logo-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/btc.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/doge.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/ark.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/jpy.svg" alt=""></div>
+            <div class="swiper-slide slide"><img src="Asset/crypto-icons/sol.svg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section> -->
+
+<!-- pcb logo section ends  -->
+
+
+<!-- contact section starts -->
+<section class="contact">
+    <div class="container contact-container">
+        <aside class="contact-aside">
+            <div class="aside-image">
+                <img src="Asset/contact.svg" alt="contact">
+            </div>
+            <h2>Contact Us</h2>
+            <p>Connect with us for inquiries, and support to enhance your investment journey. Never miss out on investment opportunities</p>
+            <ul class="contact-details">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <h5>+234-901-234-5678</h5>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h5>melhorfinance@gmail.com</h5>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h5>Add map cordinates</h5>
+                </li>
+            </ul>
+            <ul class="contact-socials">
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></i></i></a></li>
+            </ul>
+        </aside>
+
+        <form action="https://formspree.io/f/xqakoelq" method="POST" class="contact-form" >
+            <div class="form-name">
+                <input type="text" name="First Name" placeholder="First name" required>
+                <input type="text" name="Last Name" placeholder="Last name" required>
+            </div>
+            <input type="email" name="Email Address" placeholder="Your Email Address" required>
+            <textarea name="Message" rows="7" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Contact section ends -->
+
+
+<!-- footer starts here -->
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-1">
+            <a href="index.html" class="footer-logo"><h4>Melhor<span>Finance</span></a>
+            <p>Invest Right!</p>
+        </div>
+
+        <div class="footer-2">
+            <h4>Quick Links</h4>
+            <ul class="quick-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>   
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="signup.html">Login/Register</a></li>   
+            </ul>
+        </div>
+
+        <div class="footer-3">
+            <h4>Privacy</h4>
+            <ul class="privacy">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-4">
+            <h4>Contact Us</h4>
+            <div>
+                <p>+234-701-234-5678</p>
+                <p>+234-901-234-5678</p>
+                <p>melhorfinance@gmail.com</p>
+            </div>
+            <ul class="footer-socials">
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></i></i></a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footer-copyright">
+        <small>Copyright &copy; MelhorFinance</small>
+    </div>
+</footer>
+
+<!-- footer ends -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+    
+  
+  <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut(3200);
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper(".logo-slider", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 2,
+            loop: true,
+            grabCursor: true,
+            pagination: {
+                el: false,
+                clickable: false,
+            },
+        });
+
+        var swiper = new Swiper(".facilities-slider", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            grabCursor:true,
+            
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+            },
+
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        
+      });
+
+
+      var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            loop: false,
+            autoplay: true,
+        });
+    </script>
+</body>
+</html>
