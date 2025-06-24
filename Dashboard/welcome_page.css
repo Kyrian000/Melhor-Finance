@@ -35,8 +35,10 @@ html{
     --color-success:#00bf8e;
     --color-warning:#c7f10c;
     --color-danger: #f75842;
+    --color_purple: rgb(131, 3, 131);
+    --color_purple_light: rgba(236, 94, 236, 0.747);
     --color-danger-variant:#f7574241;
-    --color-primary-light:#fd01dbb4;
+    --color-primary-light:#fd01db6b;
     --color-success-light:#00bf8fa8;
     --color-warning-light: #c7f10cb6;
     --color-bg: #b8bed463;
@@ -60,8 +62,8 @@ body{
     min-height: 100vh;
     color: var(--color-black);
     display: grid;
-    grid-template-columns: 17rem auto 3rem;
-    gap: 3rem;
+    grid-template-columns: 17rem auto 30rem;
+    gap: 2rem;
     transition: var(--transitions);
     user-select: none;
 }
@@ -165,7 +167,13 @@ a{
 .bg-warning-light{
     background: var(--color-warning-light);
 }
-
+.bg-purple{
+    background: var(--color_purple);
+    box-shadow: 0 0.8rem 0.8rem var(--color_purple);
+}
+.bg-purple-light{
+    background: var(--color_purple_light);
+}
 .bg-dark{
     background: var(--color-gray-dark);
     box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.12);    
@@ -188,7 +196,6 @@ nav{
     top: 0;
     left: 0;
     z-index: 10;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 
     .nav_container{
         display: flex;
@@ -255,6 +262,12 @@ nav{
         }
     }
 }
+/* Solidify navbar on scroll */
+.window-scroll{
+    /* background: var(--color-primary-light); */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
 
 
 
@@ -300,7 +313,7 @@ nav{
 
  /* ================================ CARDS ================================ */
 .main{
-    max-width: 80rem;
+    max-width: 75rem;
     .main_header{
         display: flex;
         align-items: center;
@@ -427,4 +440,100 @@ nav{
 }
  
 
- 
+
+ /* ================================ Investments ================================ */
+.right{
+    margin-top: 7rem;
+    margin-right: 2vw;
+    .investments{
+        background: var(--color-white);
+        border-radius: var(--radius_3);
+        .investment_header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--card-padding);
+            a{
+                display: flex;
+                align-items: center;
+                color: var(--color-primary);
+                i{
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+        .investment{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--card-padding);
+            border-bottom: 1px solid var(--color-light);
+            img{
+                width: 2.4rem;
+            }
+            &:hover{
+                background: var(--color-light);
+            }
+        }
+    }
+
+/* ====================== RECENT TRANSACTIONS ====================== */
+.recent_transactions{
+    margin-top: 2rem;
+    max-width: 100%;    
+    .recent_transactions_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1rem;
+        a{
+            display: flex;
+            align-items: center;
+            color: var(--color-primary);
+            i{
+                padding-left: 0.5rem;
+            }
+        }
+    }
+    .transaction{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem var(--card-padding);
+        border-radius: var(--radius_3);
+        margin-top: 1rem;
+        &:hover{
+            background: var(--color-white);
+        }
+        .transaction_service{
+            display: flex;
+            gap: 1rem;
+            .icon{
+                width: 3.4rem;
+                height: 3.4rem;
+                border-radius: var(--radius_2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.7rem;
+                padding: 0 1.5rem;
+            }
+            .transaction_card_details{
+                display: flex;
+                justify-self: flex-start;
+                gap: 1rem;
+                .transaction_card_image{
+                    display: flex;
+                    width: 3.4rem;
+                    border-radius: var(--radius_1);
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    
+}
+}
+
+

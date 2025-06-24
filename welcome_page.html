@@ -9,7 +9,7 @@
      <link rel="shortcut icon" href="/Asset/MainLogo.png" type="image/x-icon">
 
     <!-- Stylesheet -->
-     <link rel="stylesheet" href="/Dashboard/welcome_page.css">
+     <link rel="stylesheet" href="Dashboard/welcome_page.css">
 
      <!-- font-awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -93,7 +93,7 @@
             <h1>Overview</h1>
             <input type="date">
         </header>
-
+<!-- These could be changed to balance counter depending on the backend descretion. I just used cards based on the template I'm working with(Ifee didnt give me a design :)  -->
         <section class="main_cards">
             <article class="card">
                 <div class="card_header">
@@ -258,15 +258,187 @@
 
 
 
-
-
-
-
     <!-- ================================ Charts ================================ -->
     <canvas id="chart"></canvas>
     </main>
-    
+
+
+
+<!-- ================================ Investments ================================ -->
+    <section class="right">
+        <section class="investments">
+            <header class="investment_header">
+                <h2>Investments</h2>
+                <a href="#">
+                    More <i class="fas fa-angle-right"></i>
+                </a>
+            </header>
+            <article class="investment">
+                <img src="./Asset/uniliver.png" alt="Unilever">
+                <h4>Unilever</h4>
+                <div class="date_time">
+                    <p>7 Nov, 2024</p>
+                    <small class="text_muted">9.14pm</small>
+                </div>
+                <div class="bond">
+                    <p>1,243</p>
+                    <small class="text_muted">Bonds</small>
+                </div>
+                <div class="amount">
+                    <p>$20,324</p>
+                    <small class="danger">-4.27%</small>
+                </div>
+            </article>
+            <article class="investment">
+                <img src="./Asset/monster.png" alt="Monster">
+                <h4>Monster</h4>
+                <div class="date_time">
+                    <p>7 Nov, 2024</p>
+                    <small class="text_muted">9.14pm</small>
+                </div>
+                <div class="bond">
+                    <p>1,243</p>
+                    <small class="text_muted">Bonds</small>
+                </div>
+                <div class="amount">
+                    <p>$10,324</p>
+                    <small class="danger">-0.17%</small>
+                </div>
+            </article>            
+            <article class="investment">
+                <img src="./Asset/tesla.png" alt="tesla">
+                <h4>Tesla</h4>
+                <div class="date_time">
+                    <p>7 Nov, 2024</p>
+                    <small class="text_muted">9.14pm</small>
+                </div>
+                <div class="bond">
+                    <p>1,243</p>
+                    <small class="text_muted">Bonds</small>
+                </div>
+                <div class="amount">
+                    <p>$103</p>
+                    <small class="success">+4.00%</small>
+                </div>
+            </article>
+            <article class="investment">
+                <img src="./Asset/Bitcoin.svg.png" alt="BTC">
+                <h4>Bitcoin</h4>
+                <div class="date_time">
+                    <p>7 Nov, 2024</p>
+                    <small class="text_muted">9.14pm</small>
+                </div>
+                <div class="bond">
+                    <p>1,243</p>
+                    <small class="text_muted">Bonds</small>
+                </div>
+                <div class="amount">
+                    <p>$201,124</p>
+                    <small class="success">+14.27%</small>
+                </div>
+            </article>
+        </section>
+
+
+<!-- /* ====================== RECENT TRANSACTIONS ====================== */ -->
+        
+    <section class="recent_transactions">
+        <header class="recent_transactions_header">
+            <h2>Recent Transactions</h2>
+            <a href="#">More 
+                <i class="fas fa-angle-right"></i>
+            </a>
+        </header>
+        <article class="transaction">
+            <div class="transaction_service">
+                <div class="icon bg-purple-light">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="transaction_details">
+                    <h4>Music</h4>
+                    <p>20.03.2024</p>
+                </div>
+                <div class="transaction_card_details">
+                    <div class="transaction_card_image bg-danger"> 
+                        <img src="/Asset/visa.png" alt="VISA">
+                    </div>
+                    <div class="transaction_details">
+                        <p>*5728</p>
+                        <small class="text_muted">Credit card</small>
+                    </div>
+                </div>
+            </div>
+            <h4>-$20</h4>
+        </article>
+        <article class="transaction">
+            <div class="transaction_service">
+                <div class="icon bg-purple-light">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="transaction_details">
+                    <h4>Music</h4>
+                    <p>20.03.2024</p>
+                </div>
+                <div class="transaction_card_details">
+                    <div class="transaction_card_image bg-danger"> 
+                        <img src="/Asset/visa.png" alt="VISA">
+                    </div>
+                    <div class="transaction_details">
+                        <p>*5728</p>
+                        <small class="text_muted">Credit card</small>
+                    </div>
+                </div>
+            </div>
+            <h4>-$20</h4>
+        </article>        <article class="transaction">
+            <div class="transaction_service">
+                <div class="icon bg-purple-light">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="transaction_details">
+                    <h4>Music</h4>
+                    <p>20.03.2024</p>
+                </div>
+                <div class="transaction_card_details">
+                    <div class="transaction_card_image bg-danger"> 
+                        <img src="/Asset/visa.png" alt="VISA">
+                    </div>
+                    <div class="transaction_details">
+                        <p>*5728</p>
+                        <small class="text_muted">Credit card</small>
+                    </div>
+                </div>
+            </div>
+            <h4>-$20</h4>
+        </article>        
+        <article class="transaction">
+            <div class="transaction_service">
+                <div class="icon bg-purple-light">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="transaction_details">
+                    <h4>Music</h4>
+                    <p>20.03.2024</p>
+                </div>
+                <div class="transaction_card_details">
+                    <div class="transaction_card_image bg-danger"> 
+                        <img src="/Asset/visa.png" alt="VISA">
+                    </div>
+                    <div class="transaction_details">
+                        <p>*5728</p>
+                        <small class="text_muted">Credit card</small>
+                    </div>
+                </div>
+            </div>
+            <h4>-$20</h4>
+        </article>
+    </section>
+    </section>
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.1/chart.min.js" integrity="sha512-O2fWHvFel3xjQSi9FyzKXWLTvnom+lOYR/AUEThL/fbP4hv1Lo5LCFCGuTXBRyKC4K4DJldg5kxptkgXAzUpvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/Dashboard/welcome_page.js"></script>
+    <script src="Dashboard/welcome_page.js"></script>
 </body>
 </html>
