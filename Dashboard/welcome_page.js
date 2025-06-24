@@ -14,12 +14,37 @@ closeSideBarBtn.addEventListener( 'click', () => {
 });
 
 
-// theme toggle
-const themeBtn = document.querySelector('.nav_theme_btn')
 
-themeBtn.addEventListener( 'click', () => {
-    document.body.classList.toggle('dark_theme')
-})
+
+
+// theme toggle
+const themeBtn = document.querySelector('.nav_theme_btn');
+
+// Check for saved theme preference on page load
+const currentTheme = localStorage.getItem('currentTheme');
+if (currentTheme === 'dark_theme') {
+    document.body.classList.add('dark_theme');
+    themeBtn.innerHTML = '<i class="fa-regular fa-sun"></i>';
+} else {
+    themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+}
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark_theme');
+    if (document.body.classList.contains('dark_theme')) {
+        themeBtn.innerHTML = '<i class="fa-regular fa-sun"></i>';
+        // save theme to local storage
+        localStorage.setItem('currentTheme', 'dark_theme');
+    } else {
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        // save theme to local storage
+        localStorage.setItem('currentTheme', '');
+    }
+});
+
+
+
+
 
 
 const chart = document.querySelector('#chart').getContext('2d');

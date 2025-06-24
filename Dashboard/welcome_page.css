@@ -262,6 +262,8 @@ nav{
             }
             .nav_menu_btn{
                 display: none;
+                background: var(--color-white);
+                color: var(--color-black);
                 i{
                     font-size: 2.6rem;
     
@@ -315,6 +317,9 @@ nav{
                 color: var(--color-primary);
             }
         }
+    }
+    .sidebar_close_btn{
+        display: none;
     }
 }
 
@@ -592,15 +597,17 @@ nav{
         box-shadow: 2rem 0 2rem rgba(0, 0, 0, 0.15);
         animation: showSidebar 400ms ease forwards;
         display: none;
+        .sidebar_close_btn{
+            color: var(--color-black);
+            display: inline-block;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2.2rem;
+            background: transparent;
+        }
     }
-    .sidebar_close_btn{
-        display: inline-block;
-        position: absolute;
-        top: 2rem;
-        right: 1.5rem;
-        font-size: 2.2rem;
-        background: transparent;
-    }
+    
     @keyframes showSidebar{
         to{
             left: 0;
