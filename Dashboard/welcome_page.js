@@ -1,3 +1,27 @@
+// show/hide sidebar menu
+
+let closeSideBarBtn = document.querySelector('.sidebar_close_btn');
+let sidebar = document.querySelector('.sidebar');
+let openSidebarBtn = document.querySelector('.nav_menu_btn');
+
+
+openSidebarBtn.addEventListener('click', () =>{
+    sidebar.style.display = 'flex'
+});
+
+closeSideBarBtn.addEventListener( 'click', () => {
+    sidebar.style.display = 'none'
+});
+
+
+// theme toggle
+const themeBtn = document.querySelector('.nav_theme_btn')
+
+themeBtn.addEventListener( 'click', () => {
+    document.body.classList.toggle('dark_theme')
+})
+
+
 const chart = document.querySelector('#chart').getContext('2d');
 new Chart(chart, {
     type: 'line',

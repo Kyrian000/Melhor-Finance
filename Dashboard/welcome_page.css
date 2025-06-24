@@ -55,6 +55,13 @@ html{
     
     --transitions: all 300ms ease;
 }
+/* for the dark theme, kinda a no-brainer tbh */
+.dark_theme{
+    --color-white:#131316;
+    --color-light:#23232a;
+    --color-black:#ddd;
+    --color-gray-dark:#adacb5;
+}
 
 body{
     background: var(--color-light);
@@ -236,6 +243,7 @@ nav{
             justify-content: space-between;
             cursor: pointer;
             .nav_theme_btn{
+                color: var(--color-black);
                 i{
                     background: var(--color-white);
                 }
@@ -330,25 +338,25 @@ nav{
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         .card{
-            background: linear-gradient(#fd01dbce, #7c04a0 );
+            background: linear-gradient(#fd01dbce, #3c373d );
             padding: var(--card-padding);
             border-radius: var(--radius_3);
             height: 16rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 2rem 3rem ;
+            box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
             &:hover{
                 box-shadow: 0 2rem 3rem var(--color-primary-light);
             }
             & * {
-                color: var(--color-white);
+                color: var(--color-black);
             }
             &:nth-child(2){
                 background: linear-gradient(#fd0101ef, #571105ce );
             }
             &:nth-child(3){
-                background: linear-gradient(#575454ce ,#0a0a09e8);
+                background: linear-gradient(#0a0a09e8, #575454ce );
             }
             .card_header{
                 display: flex;
@@ -575,13 +583,15 @@ nav{
     .sidebar{
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         z-index: 3;
         background: var(--color-white);
-        margin-top: 5.4rem;
+        margin-top: 5rem;
         width: 22rem;
         height: 100vh;
         box-shadow: 2rem 0 2rem rgba(0, 0, 0, 0.15);
+        animation: showSidebar 400ms ease forwards;
+        display: none;
     }
     .sidebar_close_btn{
         display: inline-block;
@@ -591,9 +601,91 @@ nav{
         font-size: 2.2rem;
         background: transparent;
     }
-
-    main{
+    @keyframes showSidebar{
+        to{
+            left: 0;
+        }
+    }
+    .main{
         grid-template-columns: 1fr;
         padding: 0 1rem;
+        .main_cards{
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            .card{
+                height: 18rem;
+            }
+        }
+    }
+    .right{
+        margin-top: 2rem;
+        .investments{
+            padding: 0 2rem;
+        }
+        .recent_transactions{
+            padding: 0 2rem;
+            .transaction{
+                .transaction_service{
+                    .transaction_card_details{
+                        margin-left: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ====================== MEDIA QUERIES FOR PHONES ====================== */
+
+
+@media screen and (max-width: 600px){
+
+    nav{
+        height: 5rem;
+
+        .nav_profile_wrapper{
+            h5{
+                display: none;
+            }
+            span{
+                display: none;
+            }            
+        }
+    }
+        .main{
+            .main_cards{
+                grid-template-columns: 1fr;
+            }
+        }
+        .right{
+        margin-top: 2rem;
+        .investments{
+            padding: 0 2rem;
+        }
+        }
+        .fastPayment{
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 3.5rem;
+        }
+}
+
+@media screen and (max-width: 350px){
+    .right{
+        margin-top: 2rem;
+        .investments{
+            padding: 0;
+        }
+        .recent_transactions{
+            padding-left: 0;
+            .transaction{
+                .transaction_service{
+                    .transaction_card_details{
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
     }
 }
