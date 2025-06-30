@@ -190,7 +190,121 @@ button{
     cursor: pointer;
 }
 
+/* CSS loader */
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;    
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9000;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  top: -8rem;
+}
+.loader::after,
+.loader::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border: 2px solid #FFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  animation: rotation 2s ease-in-out infinite;
+}
+.loader::after {
+  border-color: var(--color-primary);
+  animation-delay: 1s;
+}
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+#kast{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 4.0s;
+}
+
+#kast path:nth-child(9){
+    stroke-dasharray: 256px;
+    stroke-dashoffset: 256px;
+    animation: line-anim 2s ease forwards ;
+}
+
+#kast path:nth-child(8){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+
+#kast path:nth-child(7){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#kast path:nth-child(6){
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#kast path:nth-child(5){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#kast path:nth-child(4){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+#kast path:nth-child(3){
+    stroke-dasharray: 450px;
+    stroke-dashoffset: 450px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+#kast path:nth-child(2){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+#kast path:nth-child(1){
+    stroke-dasharray: 421px;
+    stroke-dashoffset: 421px;
+    animation: line-anim 2s ease forwards 2.4s;
+}
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: var(--color-black);
+    }
+}
 
 /* ====================== NAVBAR ====================== */
 nav{
@@ -652,6 +766,9 @@ nav{
 
 
 @media screen and (max-width: 600px){
+    #kast{
+        width: 23rem;
+    }
 
     nav{
         height: 5rem;
