@@ -246,6 +246,7 @@ nav{
                 color: var(--color-black);
                 i{
                     background: var(--color-white);
+                    border-bottom: 2px solid var(--color-white);
                 }
             }
             .nav_profile{
@@ -340,13 +341,13 @@ nav{
     .main_cards{
         margin-top: 1.5rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 2fr);
         gap: 1rem;
         .card{
-            background: linear-gradient(#fd01dbce, #3c373d );
+            background: linear-gradient(#fd01dbce);
             padding: var(--card-padding);
             border-radius: var(--radius_3);
-            height: 16rem;
+            height: 13rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -358,10 +359,14 @@ nav{
                 color: var(--color-black);
             }
             &:nth-child(2){
-                background: linear-gradient(#fd0101ef, #571105ce );
+                background: linear-gradient(#fd0101ef);
             }
             &:nth-child(3){
-                background: linear-gradient(#0a0a09e8, #575454ce );
+                color: var(--color-white); 
+                background: var(--color-white);
+            }
+            &:nth-child(4){
+                background: var(--color-success);
             }
             .card_header{
                 display: flex;
@@ -658,6 +663,11 @@ nav{
             span{
                 display: none;
             }            
+        }
+    }
+    .sidebar{
+        a{
+            padding-left: 3rem;
         }
     }
         .main{
