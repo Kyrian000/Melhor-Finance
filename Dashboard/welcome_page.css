@@ -240,7 +240,6 @@ button{
     transform: translate(-50%, -50%);
     animation: fill 0.5s ease forwards 4.0s;
 }
-
 #kast path:nth-child(9){
     stroke-dasharray: 256px;
     stroke-dashoffset: 256px;
@@ -291,6 +290,7 @@ button{
     stroke-dashoffset: 421px;
     animation: line-anim 2s ease forwards 2.4s;
 }
+
 @keyframes line-anim{
     to{
         stroke-dashoffset: 0;
@@ -305,6 +305,8 @@ button{
         fill: var(--color-black);
     }
 }
+
+
 
 /* ====================== NAVBAR ====================== */
 nav{
@@ -476,16 +478,17 @@ nav{
                 background: linear-gradient(#fd0101ef);
             }
             &:nth-child(3){
-                color: var(--color-white); 
                 background: var(--color-white);
             }
             &:nth-child(4){
-                background: var(--color-success);
+                background: var(--color-danger);
             }
+
             .card_header{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                
                 .card_header_left{
                     display: flex;
                     gap: 0.5rem;
@@ -493,6 +496,7 @@ nav{
                     h3{
                         font-weight: 400;
                     }
+
                     img{
                         width: 2rem;
                         border: 1px solid white;

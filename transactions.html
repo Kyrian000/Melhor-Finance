@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="Asset/MainLogo.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+     <link rel="stylesheet" href="Dashboard/welcome_page.css">
+
+     <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Font style cdns -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');    
+    </style>
+    <!-- Font style cdns -->
+
+        <!-- CSS pre-loader -->
+    <div class="loader-wrapper">
+        <!-- Option 1 -->
+        <span class="loader"></span>
+
+        <!-- Option 2 -->
+       
+        <svg 
+                id="kast"
+                width="458" 
+                height="128" 
+                viewBox="0 0 458 128" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M399.15 41.52H430.19C434.841 41.52 439.043 42.5013 442.798 44.464C446.595 46.384 449.603 49.2 451.822 52.912C454.041 56.624 455.15 61.1253 455.15 66.416C455.15 71.664 454.147 75.9947 452.142 79.408C450.137 82.8213 447.726 85.3813 444.91 87.088C442.094 88.7947 439.47 89.7547 437.038 89.968L457.838 126H442.67L423.47 90.992H412.59V126H399.15V41.52ZM412.59 81.264H425.39C429.913 81.264 433.71 80.1333 436.782 77.872C439.854 75.6107 441.39 71.92 441.39 66.8C441.39 61.6373 439.875 57.968 436.846 55.792C433.817 53.616 430.041 52.528 425.518 52.528H412.59V81.264Z" stroke="white" stroke-width="2"/>
+                    <path d="M316.268 83.696C316.268 89.4987 317.484 94.768 319.916 99.504C322.348 104.197 325.697 107.931 329.964 110.704C334.231 113.435 339.137 114.8 344.684 114.8C350.316 114.8 355.244 113.435 359.468 110.704C363.735 107.931 367.063 104.197 369.452 99.504C371.884 94.768 373.1 89.4987 373.1 83.696C373.1 77.8933 371.884 72.6453 369.452 67.952C367.063 63.2587 363.735 59.5467 359.468 56.816C355.244 54.0853 350.316 52.72 344.684 52.72C339.137 52.72 334.231 54.0853 329.964 56.816C325.697 59.5467 322.348 63.2587 319.916 67.952C317.484 72.6453 316.268 77.8933 316.268 83.696ZM302.252 83.696C302.252 77.552 303.319 71.8347 305.452 66.544C307.628 61.2107 310.615 56.56 314.412 52.592C318.252 48.624 322.753 45.5307 327.916 43.312C333.079 41.0933 338.668 39.984 344.684 39.984C350.785 39.984 356.396 41.0933 361.516 43.312C366.679 45.5307 371.18 48.624 375.02 52.592C378.86 56.56 381.825 61.2107 383.916 66.544C386.007 71.8347 387.052 77.552 387.052 83.696C387.052 89.8827 386.007 95.6427 383.916 100.976C381.868 106.267 378.945 110.917 375.148 114.928C371.351 118.896 366.871 121.989 361.708 124.208C356.545 126.427 350.871 127.536 344.684 127.536C338.455 127.536 332.737 126.427 327.532 124.208C322.369 121.989 317.889 118.896 314.092 114.928C310.337 110.917 307.415 106.267 305.324 100.976C303.276 95.6427 302.252 89.8827 302.252 83.696Z" stroke="white" stroke-width="2"/>
+                    <path d="M276.335 89.648H239.279V126H225.903V41.52H239.279V77.68H276.335V41.52H289.647V126H276.335V89.648Z" stroke="white" stroke-width="2"/>
+                    <path d="M166.031 41.52H179.535V113.968H211.983V126H166.031V41.52Z" stroke="white" stroke-width="2"/>
+                    <path d="M98.278 41.52H149.478V53.552H111.654V77.808H148.838V89.52H111.654V113.968H149.478V126H98.278V41.52Z" stroke="white" stroke-width="2"/>
+                    <path d="M81 0V126H67.5427V40.1864L68.1835 24.0545L65.6203 42.1909L47.1005 117.982H33.8354L15.3797 42.1909L12.8165 24.0545L13.4573 40.1864V126H0V0H18.3916L39.5388 94.3091L40.5 101.85L41.3972 94.3091L62.6725 0H81Z" stroke="white" stroke-width="2"/>
+        </svg>
+
+    </div>
+
+
+</head>
+<body>
+
+
+    <!-- ================================ NAVBAR ================================-->
+    <nav>
+        <div class="container nav_container">
+            <a href="Dashboard/welcome_page.html" class="nav_logo">
+                <img src="Asset/MainLogo.png" alt="Melhor">
+            </a>
+            <div class="nav_search">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="nav_profile_wrapper">
+                <button class="nav_theme_btn">
+                    <i class="fas fa-moon "></i>
+                </button>
+                <div class="nav_profile">
+                    <div class="nav_profile_photo">
+                        <img src="Asset/users/user-dummy-img.jpg" alt="User">
+                    </div>
+                    <h5>Hello, User</h5>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <button class="nav_menu_btn">
+                    <i class="fas fa-bars "></i>
+                </button>
+            </div>
+            
+
+        </div>
+    </nav>
+
+    <!-- ================================ SIDEBAR ================================-->
+    <menu class="sidebar">
+        <a href="welcome_page.html" class="active">
+            <i class="fas fa-tachometer-alt"></i>
+            <h5>Dashboard</h5>
+        </a>
+        <a href="">
+            <i class="fas fa-exchange-alt"></i>
+            <h5>Exchange</h5>
+        </a>
+        <a href="">
+            <i class="fas fa-wallet"></i>
+            <h5>Wallet</h5>
+        </a>
+        <a href="">
+            <i class="fas fa-clock"></i>
+            <h5>Transactions</h5>
+        </a>
+        <a href="">
+            <i class="fa-solid fa-chart-line"></i>
+            <h5>Invest now</h5>
+        </a>
+        <a href="">
+            <i class="fa-solid fa-headset"></i>
+            <h5>Contact Support</h5>
+        </a>
+        <a href="">
+            <i class="fa-solid fa-gear"></i>
+            <h5>Settings</h5>
+        </a>
+        <a href="index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <h5>Logout</h5>
+        </a>
+        <button class="sidebar_close_btn"><i class="fa-solid fa-xmark"></i></button>
+    </menu>
+
+    <div class="no_transaction_default">
+        <h2>No Transactions yet</h2>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.1/chart.min.js" integrity="sha512-O2fWHvFel3xjQSi9FyzKXWLTvnom+lOYR/AUEThL/fbP4hv1Lo5LCFCGuTXBRyKC4K4DJldg5kxptkgXAzUpvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="Dashboard/welcome_page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut(4500);
+        });
+    </script>
+
+</body>
+</html>
