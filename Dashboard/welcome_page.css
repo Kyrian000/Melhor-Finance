@@ -335,8 +335,8 @@ nav{
             background: var(--color-light);
             border-radius: var(--radius_2);
             padding: 0.5rem 1rem;
-            width: 40rem;
-            height: 3rem;
+            width: 45rem;
+            height: 4.5rem;
             display: flex;
             gap: 1rem;
             align-items: center;
@@ -405,6 +405,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    z-index: 101;
     a{
         display: flex;
         align-items: center;
