@@ -113,6 +113,10 @@ body{
                     .wallet_token_image{
                         width: 3rem;
                         height: 3rem;
+                        i{
+                            color: var(--color-black);
+                            font-size: 3rem;
+                        }
                     }
                     & > div{
                         display: flex;
