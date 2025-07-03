@@ -80,4 +80,25 @@ window.addEventListener('scroll', () =>{
 
 
 
-// pre
+// preventing logout unless confirm prints true
+
+// let logout = document.querySelectorAll('.logout');
+
+// logout.addEventListener('click', (e) => {
+//     // Prevent default action (in case it's a link or form button)
+//     e.preventDefault();
+    
+//     let confirmed = confirm('Are you sure you want to logout?');
+    
+//     if (confirmed) {
+//     fetch('/api/logout', {
+//         method: 'POST',
+//         credentials: 'same-origin'
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             window.location.href = '/login';
+//         }
+//     });
+// }
+// });
