@@ -1,35 +1,53 @@
 body{
     grid-template-columns: 17rem auto;
 }
-:root{
-    --color-white:#fff;
-    --color-light:#eee7e7;
-    --color-gray-light:#686262bd;
-    --color-gray-dark:#1d1b1b;
-    --color-black:#000;
-    --color-primary:#fd01dbce;
-    --color-success:#00bf8e;
-    --color-warning:#c7f10c;
-    --color-danger: #f75842;
-    --color_purple: rgb(131, 3, 131);
-    --color_purple_light: rgba(236, 94, 236, 0.747);
-    --color-danger-variant:#f7574241;
-    --color-primary-light:#fd01db6b;
-    --color-success-light:#00bf8fa8;
-    --color-warning-light: #c7f10cb6;
-    --color-bg: #b8bed463;
-
-    --container-width-lg: 80%;
-    --container-width-md: 90%;
-    --container-width-sm: 94%;
-
-    --card-padding:1.6rem;
-
-    --radius_1: 0.5rem;
-    --radius_2: 1rem;
-    --radius_3: 1.6rem;
-    
-    --transitions: all 300ms ease;
+.loader-wrappers{
+    width: calc(100vw - 17.5rem);
+    height: calc(100vh - 5.3rem);
+    margin-top: 5.3rem;
+    margin-left: 17.5rem;
+    position: fixed;    
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.5);
+}
+.loaders {
+  transform: translateZ(1px);
+}
+.loaders:after {
+  content: '$';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-align: center;
+  line-height:40px;
+  font-size: 32px;
+  font-weight: bold;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: 4px double ;
+  box-sizing: border-box;
+  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
+  animation: coin-flip 4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes coin-flip {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
 }
 .wallet{
     margin-top: 8rem;
@@ -125,6 +143,12 @@ body{
     .wallet{
         padding-left: 2vw;
     }
+    .loader-wrappers{
+    margin-top: 5.2rem;
+    margin-left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 @media screen and (max-width: 600px){
