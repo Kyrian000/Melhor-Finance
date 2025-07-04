@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Verification</title>
+    <style>
+        :root {
+            --primary-color: #fd01dbce;
+            --secondary-color: #3f37c9;
+            --light-gray: #f8f9fa;
+            --dark-gray: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            padding: 2rem;
+        }
+
+        .kyc-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .kyc-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .kyc-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .kyc-header p {
+            color: var(--dark-gray);
+        }
+
+        .kyc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .form-group input, 
+        .form-group select {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+        }
+
+        .document-upload {
+            border: 2px dashed #ddd;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .document-upload:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        .document-upload i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .document-upload p {
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .document-upload small {
+            color: #adb5bd;
+        }
+
+        .upload-preview {
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .upload-preview img {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: var(--border-radius);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .required-field::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="kyc-container">
+        <div class="kyc-header">
+            <h1>KYC Verification</h1>
+            <p>Please provide your identification documents for verification</p>
+        </div>
+
+        <form class="kyc-form" id="kycForm">
+            <!-- Passport Section -->
+            <div class="form-group">
+                <label class="required-field">Passport Number</label>
+                <input type="text" id="passportNumber" name="passportNumber" placeholder="Enter passport number" required>
+            </div>
+
+            <div class="form-group">
+                <label class="required-field">Passport Expiry Date</label>
+                <input type="date" id="passportExpiry" name="passportExpiry" required>
+            </div>
+
+            <div class="form-group">
+                <label class="required-field">Passport Upload</label>
+                <div class="document-upload" id="passportUpload">
+                    <i class="fas fa-passport"></i>
+                    <p>Upload Passport</p>
+                    <small>JPEG, PNG or PDF (Max 5MB)</small>
+                    <input type="file" id="passportFile" name="passportFile" accept="image/*,.pdf" style="display: none;">
+                    <div class="upload-preview" id="passportPreview"></div>
+                </div>
+            </div>
+
+            <!-- International Passport Section -->
+            <div class="form-group">
+                <label class="required-field">International Passport Number</label>
+                <input type="text" id="internationalPassportNumber" name="internationalPassportNumber" placeholder="Enter international passport number" required>
+            </div>
+
+            <div class="form-group">
+                <label class="required-field">International Passport Expiry Date</label>
+                <input type="date" id="internationalPassportExpiry" name="internationalPassportExpiry" required>
+            </div>
+
+            <div class="form-group">
+                <label class="required-field">International Passport Upload</label>
+                <div class="document-upload" id="internationalPassportUpload">
+                    <i class="fas fa-passport"></i>
+                    <p>Upload International Passport</p>
+                    <small>JPEG, PNG or PDF (Max 5MB)</small>
+                    <input type="file" id="internationalPassportFile" name="internationalPassportFile" accept="image/*,.pdf" style="display: none;">
+                    <div class="upload-preview" id="internationalPassportPreview"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Verification</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle passport upload
+            const passportUpload = document.getElementById('passportUpload');
+            const passportFile = document.getElementById('passportFile');
+            const passportPreview = document.getElementById('passportPreview');
+
+            passportUpload.addEventListener('click', function() {
+                passportFile.click();
+            });
+
+            passportFile.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    const file = e.target.files[0];
+                    if (file.size > 5 * 1024 * 1024) {
+                        alert('File size exceeds 5MB limit');
+                        return;
+                    }
+
+                    if (file.type.match('image.*')) {
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                            passportPreview.innerHTML = `<img src="${event.target.result}" alt="Passport Preview">`;
+                            passportPreview.style.display = 'block';
+                        };
+                        reader.readAsDataURL(file);
+                    } else if (file.type === 'application/pdf') {
+                        passportPreview.innerHTML = `<i class="fas fa-file-pdf" style="font-size: 3rem; color: #e63946;"></i><p>PDF Document Uploaded</p>`;
+                        passportPreview.style.display = 'block';
+                    }
+                }
+            });
+
+            // Handle international passport upload
+            const intlPassportUpload = document.getElementById('internationalPassportUpload');
+            const intlPassportFile = document.getElementById('internationalPassportFile');
+            const intlPassportPreview = document.getElementById('internationalPassportPreview');
+
+            intlPassportUpload.addEventListener('click', function() {
+                intlPassportFile.click();
+            });
+
+            intlPassportFile.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    const file = e.target.files[0];
+                    if (file.size > 5 * 1024 * 1024) {
+                        alert('File size exceeds 5MB limit');
+                        return;
+                    }
+
+                    if (file.type.match('image.*')) {
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                            intlPassportPreview.innerHTML = `<img src="${event.target.result}" alt="International Passport Preview">`;
+                            intlPassportPreview.style.display = 'block';
+                        };
+                        reader.readAsDataURL(file);
+                    } else if (file.type === 'application/pdf') {
+                        intlPassportPreview.innerHTML = `<i class="fas fa-file-pdf" style="font-size: 3rem; color: #e63946;"></i><p>PDF Document Uploaded</p>`;
+                        intlPassportPreview.style.display = 'block';
+                    }
+                }
+            });
+
+            // Form submission
+            const kycForm = document.getElementById('kycForm');
+            kycForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all required fields
+                const requiredFields = kycForm.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value) {
+                        field.style.borderColor = 'red';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
+                });
+
+                if (isValid) {
+                    // Here you would typically send the data to your server
+                    alert('KYC information submitted successfully!');
+                    // kycForm.reset();
+                    // passportPreview.style.display = 'none';
+                    // intlPassportPreview.style.display = 'none';
+                } else {
+                    alert('Please fill in all required fields');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

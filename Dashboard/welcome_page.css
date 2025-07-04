@@ -388,7 +388,8 @@ nav{
                     display: none;
                     transition: all 0.3s ease;
                     border: 1px solid var(--color-light);
-                    
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 700;
                     ul {
                         list-style: none;
                         padding: 0;
@@ -434,7 +435,13 @@ nav{
             }
             
             .nav_menu_btn{
-                display: none !important; /* Force hide the menu button as requested */
+                display: none;
+                background: var(--color-white);
+                color: var(--color-black);
+                i{
+                    font-size: 2.6rem;
+    
+                }
             }
         }
     }
@@ -752,7 +759,7 @@ nav{
             }
         .nav_profile_wrapper{
             .nav_menu_btn{
-                display: inline-block;
+                display: block;
             }
         }
         }
