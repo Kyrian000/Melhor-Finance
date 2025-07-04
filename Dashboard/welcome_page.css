@@ -413,8 +413,10 @@ nav{
                                     margin-right: 1.5rem;
                                     width: 2rem;
                                     text-align: center;
-                                    color: var(--color-gray-dark);
+                                    /* color: var(--color-gray-dark); */
+                                    color: var(--color-black);
                                 }
+                        
                             }
                             
                             &.dropdown-divider {
@@ -832,6 +834,9 @@ nav{
             }
             span{
                 display: none;
+            }
+            .drop{
+                display: flex;
             }            
         }
     }
