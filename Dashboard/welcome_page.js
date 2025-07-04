@@ -82,10 +82,11 @@ window.addEventListener('scroll', () =>{
 
 // preventing logout unless confirm prints true
 
-// let logout = document.querySelectorAll('.logout');
+let logout = document.querySelectorAll('.logout');
 
-// logout.addEventListener('click', (e) => {
-//     // Prevent default action (in case it's a link or form button)
+logout.addEventListener('click', (e) => {
+
+    //     // Prevent default action (in case it's a link or form button)
 //     e.preventDefault();
     
 //     let confirmed = confirm('Are you sure you want to logout?');
@@ -101,4 +102,25 @@ window.addEventListener('scroll', () =>{
 //         }
 //     });
 // }
-// });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.querySelector('.profile-dropdown-toggle');
+    const dropdownMenu = document.querySelector('.profile-dropdown-menu');
+    
+    dropdownToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+        dropdownMenu.style.display = 'none';
+    });
+    
+    // Prevent dropdown from closing when clicking inside it
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
